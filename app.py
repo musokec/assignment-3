@@ -13,13 +13,13 @@ def database_connect():
     return conn
 
 
-@app.route("/")
+@app.route('/')
 def database_version():
     conn = database_connect()
     cur = conn.cursor()
 
     cur.execute('SELECT VERSION();')
-    database_version = curr.fetchall()
+    database_version = cur.fetchall()
 
     cur.close()
     conn.close()
