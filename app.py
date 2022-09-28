@@ -13,7 +13,7 @@ def database_connect():
     return conn
 
 
-@app.route('/', methods = ('GET', 'POST'))
+@app.route('/')
 def database_version():
     conn = database_connect()
     cur = conn.cursor()
